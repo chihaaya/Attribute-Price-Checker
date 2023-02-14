@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<title>Attribute Price Checker</title>
+		<script src="bundle.js">
+		</script>
+	</head>
+	<body>
+		<div>
+			<input type="button" value="refresh" id="refreshButton" disabled="true">
+			<p id="loadingProgress"></p>
+			<p id="parseProgress"></p>
+			<p id="lastUpdated"></p>
+		</div>
+		<div id="armor">
+			<label><input type="checkbox" id="helmet">Helmet</label>
+			<label><input type="checkbox" id="chestplate">Chestplate</label>
+			<label><input type="checkbox" id="leggings">Leggings</label>
+			<label><input type="checkbox" id="boots">Boots</label>
+		</div>
+		<div id="equipment">
+			<label><input type="checkbox" id="necklace">Necklace</label>
+			<label><input type="checkbox" id="cloak">Cloak</label>
+			<label><input type="checkbox" id="belt">Belt</label>
+			<label><input type="checkbox" id="gauntlet">Gauntlet</label>
+		</div>
+		<div id="shard">
+			<label><input type="checkbox" id="attribute_shard">Attribute Shard</label>
+		</div>
+		<div id="attribute">
+			<select id="attributeName">
+				<option>Select Attribute</option>
+				<option>Arachno Resistance</option>
+				<option>Blazing Resistance</option>
+				<option>Breeze</option>
+				<option>Dominance</option>
+				<option>Ender Resistance</option>
+				<option>Experience</option>
+				<option>Fortitude</option>
+				<option>Life Regeneration</option>
+				<option>Lifeline</option>
+				<option>Magic Find</option>
+				<option>Mana Pool</option>
+				<option>Mana Regeneration</option>
+				<option>Mending</option>
+				<option>Vitality</option>
+				<option>Speed</option>
+				<option>Undead Resistance</option>
+				<option>Veteran</option>
+			</select>
+			<select id="attributeLevel">
+				<option hidden>Select Level</option>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+				<option>6</option>
+				<option>7</option>
+				<option>8</option>
+				<option>9</option>
+				<option>10</option>
+			</select>
+			<select id="sortMethod">
+				<option>just</option>
+				<option>or more</option>
+				<option>or less</option>
+			</select>
+		</div>
+		<div id="attribute2">
+			<select id="attributeName2">
+				<option>Select Attribute</option>
+				<option>Arachno Resistance</option>
+				<option>Blazing Resistance</option>
+				<option>Breeze</option>
+				<option>Dominance</option>
+				<option>Ender Resistance</option>
+				<option>Experience</option>
+				<option>Fortitude</option>
+				<option>Life Regeneration</option>
+				<option>Lifeline</option>
+				<option>Magic Find</option>
+				<option>Mana Pool</option>
+				<option>Mana Regeneration</option>
+				<option>Mending</option>
+				<option>Vitality</option>
+				<option>Speed</option>
+				<option>Undead Resistance</option>
+				<option>Veteran</option>
+			</select>
+			<select id="attributeLevel2">
+				<option hidden>Select Level</option>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+				<option>6</option>
+				<option>7</option>
+				<option>8</option>
+				<option>9</option>
+				<option>10</option>
+			</select>
+			<select id="sortMethod2">
+				<option>just</option>
+				<option>or more</option>
+				<option>or less</option>
+			</select>
+		</div>
+		<div>
+			<table id="table" style="text-align: center">
+				<tr>
+					<th>Item Name</th>
+					<th>Price</th>
+					<th>Price Per Levels</th>
+					<th>Attribute #1</th>
+					<th>Attribute #2</th>
+					<th>UUID</th>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

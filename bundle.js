@@ -16536,11 +16536,11 @@ async function search() {
 
       let category = returnItemCategory(data.item_name);
 
-      let info = {};
-      info["item_name"] = data.item_name;
-      info["uuid"] = data.uuid;
-      info["price"] = data.starting_bid;
       for (let i = 0; i < (category == "attribute_shard" ? 1 : 2); i++) {
+        let info = {};
+        info["item_name"] = data.item_name;
+        info["uuid"] = data.uuid;
+        info["price"] = data.starting_bid;
         if (attributeNames.indexOf(attributeKeys[i]) == -1) continue;
         info["price_per_level"] = data.starting_bid / 2 ** (attributes[attributeKeys[i]].value - 1);
         info["attributes"] = {};
